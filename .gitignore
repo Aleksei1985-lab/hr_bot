@@ -2,7 +2,18 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+.env
+*.pyc
+__pycache__/
+*.sqlite
+*.db
+resumes/
+*.json
+*.pdf
+*.docx
+.DS_Store
+.venv
+hr-bot-458309-172165e27a72.json
 # C extensions
 *.so
 
