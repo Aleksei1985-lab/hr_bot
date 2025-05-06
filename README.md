@@ -1,6 +1,6 @@
 ![Python](https://img.shields.io/badge/python-3.9+-blue.svg)
 ![Aiogram](https://img.shields.io/badge/aiogram-3.x-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
+![License](https://img.shields.io/badge/license-Apache-green.svg)
 The HR Telegram Bot
 # HR Telegram Bot 🤖
 
@@ -49,7 +49,7 @@ Required environment variables:
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the [Apache License](http://www.apache.org/licenses/)
 
 ---
 
@@ -98,4 +98,4 @@ docker-compose up --build
 
 ## 📄 Лицензия
 
-Проект лицензирован под MIT License - подробности в файле [LICENSE](LICENSE).
+This project is licensed under the [Apache License](http://www.apache.org/licenses/)
