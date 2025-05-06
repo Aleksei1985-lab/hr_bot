@@ -1,0 +1,12 @@
+services:
+  hr-bot:
+    build: .
+    volumes:
+      - .:/app
+      - resumes:/app/resumes
+    env_file:
+      - .env
+    restart: unless-stopped
+
+volumes:
+  resumes:
