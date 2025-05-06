@@ -1,12 +1,22 @@
-services:
-  hr-bot:
-    build: .
-    volumes:
-      - .:/app
-      - resumes:/app/resumes
-    env_file:
-      - .env
-    restart: unless-stopped
+version: '3.8'
 
-volumes:
-  resumes:
+services:
+  bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hr_bot
+    volumes:
+      - ./candidates.db:/app/candidates.db
+      - ./resumes:/app/resumes
+      - ./bot.log:/app/bot.log
+      - ./hr-bot-458309-172165e27a72.json:/app/hr-bot-458309-172165e27a72.json:ro
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - SPREADSHEET_ID=${SPREADSHEET_ID}
+      - HR_NOTIFICATION_CHAT_ID=${HR_NOTIFICATION_CHAT_ID}
+      - DATABASE_URL=sqlite:///candidates.db
+      - VACANCY_CHANNEL_ID=${VACANCY_CHANNEL_ID}
+      - CHANNEL_USERNAME=${CHANNEL_USERNAME}
+      - GOOGLE_SHEETS_CREDENTIALS=hr-bot-458309-172165e27a72.json
+    restart: unless-stopped
